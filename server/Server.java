@@ -21,14 +21,14 @@ public class Server {
             String risposta="";
             byte[] bufferRisposta;
             DatagramPacket packetRisposta;
-            if(comando.toLowerCase()=="set"){
+            if(comando.toLowerCase().equals("set")){
                 stringhe.add(valore);
                 risposta="ok";
             }
-            else if(comando.toLowerCase()=="get"){
+            else if(comando.toLowerCase().equals("get")){
                 risposta="0";
                 for(int i=0;i<stringhe.size();i++){
-                    if(stringhe.get(i)==valore){
+                    if(stringhe.get(i).equals(valore)){
                         risposta=stringhe.get(i);
                     }
                 }
