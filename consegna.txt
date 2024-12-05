@@ -1,0 +1,21 @@
+creare un programma server che permetta di memorizzare una variabile stringa e di restituirla ad un client.
+
+Protocollo:
+// COMANDO;VALORE
+//COMANDI: set, get
+
+SET:
+client invia:     set;STRINGA_DA_MEMORIZZARE
+server salva la stringa
+server risponde:     ok
+
+GET:
+client invia:      get;
+server controlla se c'è la stringa
+c'è -> invia:              1;STRINGA_MEMORIZZATA
+non c'è -> invia:      0;
+
+CODICE_NON_IDENTIFICATO:
+client invia:      COMANDO
+server riceve un comando errato ( seP, geX, .... )  
+server invia:     err
